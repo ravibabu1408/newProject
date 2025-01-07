@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="nopCommerce site ">
+	
+	<listeners>
+		<listener class-name="api.utlities.ExtentReportManager"/>
+	</listeners>
+    <test name="Regression">
+         <classes>
+             <class name="api.test.UserTests"/>
+            
+         </classes>
+     </test> <!-- Test -->
+</suite> <!-- Suite -->
