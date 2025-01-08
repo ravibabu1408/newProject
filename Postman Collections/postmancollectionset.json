@@ -14,7 +14,11 @@
 						"id": "3e9a3aba-5b94-40c8-90d8-227744220540",
 						"exec": [
 							"\r",
-							"console.log(pm.globals.get(\"host\"));"
+							"console.log(pm.globals.get(\"host\"));\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -45,7 +49,26 @@
 						}
 					}
 				},
-				"url": "http://dummy.restapiexample.com/api/v1/employees",
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/employees?key=1",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "1"
+						}
+					]
+				},
 				"description": "Testing"
 			},
 			"response": []
